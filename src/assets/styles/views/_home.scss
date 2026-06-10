@@ -1,1 +1,165 @@
 // Estilos especificos de la HomePage (hero, filtros, catalogo)
+
+@use '../base/variables' as *;
+
+// Hero section
+
+.hero {
+    padding: 2.5rem 1rem 2rem;
+
+    @media (min-width: $bp-tablet) {
+        padding: 3.5rem 2rem 3rem;
+    }
+
+    @media (min-width: $bp-desktop) {
+        padding: 5rem 4rem 4rem;
+        max-width: $bp-wide;
+        margin: 0 auto;
+    }
+
+    &__content {
+        display: grid;
+        grid-template-columns: 1fr;
+
+        @media (min-width: $bp-desktop) {
+            grid-template-columns: 1fr 380px;
+            gap: 3rem;
+            align-items: center;
+        }
+    }
+
+    &__left {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    &__right {
+        display: none;
+
+        @media (min-width: $bp-desktop) {
+            display: block;
+        }
+    }
+
+    &__tag {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        font-family: $font-mono;
+        font-size: 10px;
+        letter-spacing: 0.22em;
+        text-transform: uppercase;
+        color: var(--color-secondary);
+        background: var(--color-secondary-dim);
+        border: 1px solid var(--color-border-cyan);
+        padding: 5px 14px;
+        border-radius: var(--radius-full);
+        margin-bottom: 1.5rem;
+
+        @media (min-width: $bp-tablet) {
+            margin-bottom: 2.2rem;
+        }
+    }
+
+    &__title {
+        font-family: $font-display;
+        font-weight: 800;
+        line-height: 0.9;
+        letter-spacing: -4px;
+        font-size: clamp(72px, 20vw, 120px);
+        background: linear-gradient(135deg, #e2d9f3 0%, #a855f7 35%, #22d3ee 65%, #f1f5f9 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        background-size: 250%;
+        animation: fps-shimmer 5s ease infinite;
+        margin-bottom: 1.2rem;
+
+        @media (min-width: $bp-desktop) {
+            font-size: clamp(90px, 18vw, 160px);
+            letter-spacing: -8px;
+            margin-bottom: 1.4rem;
+        }
+    }
+
+    &__acronym {
+        display: flex;
+        align-items: flex-start;
+        gap: 1.2rem;
+        margin-bottom: 0.8rem;
+
+        @media (min-width: $bp-tablet) {
+            gap: 1.8rem;
+            margin-bottom: 1rem;
+        }
+    }
+
+    &__acronym-part {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 4px;
+    }
+
+    &__acronym-letter {
+        font-family: $font-display;
+        font-size: 10px;
+        font-weight: 700;
+        color: var(--color-primary);
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+    }
+
+    &__acronym-word {
+        font-family: $font-body;
+        font-size: 11px;
+        color: var(--color-text-muted);
+        white-space: nowrap;
+
+        @media (min-width: $bp-tablet) {
+            font-size: 13px;
+        }
+    }
+
+    &__acronym-sep {
+        width: 5px;
+        height: 5px;
+        border-radius: 50%;
+        background: rgba(168, 85, 247, 0.35);
+        margin-top: 6px;
+        flex-shrink: 0;
+    }
+
+    &__joke {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        font-family: $font-mono;
+        font-size: 11px;
+        color: var(--color-text-dim);
+        letter-spacing: 0.1em;
+        margin-bottom: 2rem;
+
+        @media (min-width: $bp-tablet) {
+            margin-bottom: 2.8rem;
+        }
+
+        em {
+            color: var(--color-accent);
+            font-style: normal;
+        }
+    }
+
+    &__cta {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+
+        @media (min-width: $bp-mobile) {
+            flex-direction: row;
+            width: auto;
+        }
+    }
+}
