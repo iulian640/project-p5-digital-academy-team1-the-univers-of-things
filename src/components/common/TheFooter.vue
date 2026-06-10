@@ -49,3 +49,68 @@
         </div>
     </footer>
 </template>
+
+<style lang="scss" scoped>
+@use '../../assets/styles/base/variables' as *;
+
+/* Estilos del footer: layout mobile-first, copyright y redes sociales */
+
+.footer {
+    border-top: 1px solid var(--color-border);
+    background: rgba(3, 3, 8, 0.65);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+
+    &__inner {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: var(--space-4);
+        padding: 1.5rem 1rem;
+        max-width: $bp-wide;
+        margin: 0 auto;
+        text-align: center;
+
+        @media (min-width: $bp-mobile) {
+            flex-direction: row;
+            justify-content: space-between;
+            text-align: left;
+            padding: 1.5rem 2.5rem;
+        }
+    }
+
+    &__copy {
+        font-family: $font-mono;
+        font-size: 11px;
+        color: var(--color-text-muted);
+        letter-spacing: 0.06em;
+        display: block;
+    }
+
+    &__social {
+        display: flex;
+        align-items: center;
+        gap: 18px;
+    }
+
+    &__social-link {
+        color: var(--color-text-muted);
+        display: flex;
+        align-items: center;
+        transition:
+            color var(--transition),
+            transform var(--transition);
+
+        &:hover {
+            color: var(--color-secondary);
+            transform: translateY(-2px);
+        }
+
+        &:focus-visible {
+            outline: 2px solid var(--color-secondary);
+            outline-offset: 4px;
+            border-radius: 4px;
+        }
+    }
+}
+</style>
