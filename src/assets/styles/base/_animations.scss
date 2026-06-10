@@ -1,1 +1,69 @@
-// Keyframes globales con prefijo fps- (fps-shimmer, fps-blink, fps-pulse, fps-aurora)
+// Keyframes globales con prefijo fps- para evitar colisiones
+
+@keyframes fps-shimmer {
+
+    0%,
+    100% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+}
+
+@keyframes fps-blink {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.25;
+    }
+}
+
+@keyframes fps-pulse {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+}
+
+@keyframes fps-aurora {
+
+    0%,
+    100% {
+        transform: translate(0, 0) scale(1);
+    }
+
+    25% {
+        transform: translate(45px, -35px) scale(1.04);
+    }
+
+    50% {
+        transform: translate(-25px, 55px) scale(0.96);
+    }
+
+    75% {
+        transform: translate(-55px, -25px) scale(1.02);
+    }
+}
+
+@keyframes fps-fade-in {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
