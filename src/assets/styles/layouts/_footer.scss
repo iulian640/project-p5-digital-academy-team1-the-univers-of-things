@@ -1,1 +1,11 @@
-// Variante .footer--private para vistas de dashboard
+// Variante .footer--private para vistas de dashboard (sin redes sociales)
+
+.footer--private {
+    .footer__social {
+        display: none;
+    }
+
+    .footer__inner {
+        justify-content: center;
+    }
+}
