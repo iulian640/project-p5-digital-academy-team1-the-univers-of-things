@@ -1,13 +1,10 @@
 <!-- Vista principal: hero, bento destacados, catalogo con paginacion -->
 <script setup>
-import TheHeader from '@/components/common/TheHeader.vue'
-import TheFooter from '@/components/common/TheFooter.vue'
+import MainLayout from '@/layouts/MainLayout.vue'
 </script>
 
 <template>
-    <TheHeader />
-    <main>
+    <MainLayout>
         <p>Home — en construccion</p>
-    </main>
-    <TheFooter />
+    </MainLayout>
 </template>
