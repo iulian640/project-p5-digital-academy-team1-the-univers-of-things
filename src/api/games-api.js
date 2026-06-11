@@ -1,6 +1,13 @@
-const apiURL = 'https://www.mmobomb.com/api1/games'
+const API_URL = 'https://www.mmobomb.com/api1/games'
 
-fetch(apiURL)
-        .then(response => response.json()) 
-        .then(data => console.log(data))
-        .catch(error => console.log('Error, error'))
+export async function getGames() {
+        try {
+            const response = await fetch(API_URL)
+            if (!response.ok) throw new Error(`Error ${response.status}`)     
+            return await response.json()           
+        }
+        catch (error) {
+                console.error('Error fetching games:', error)
+                throw error
+        }
+}
