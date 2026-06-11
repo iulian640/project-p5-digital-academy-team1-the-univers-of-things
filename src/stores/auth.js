@@ -18,6 +18,6 @@ export const useAuthStore = defineStore('auth', () => {
         const result = await createUserWithEmailAndPassword(auth, email, password)
         await createUserProfile(result.user.uid, email, username)
     }
-    return { user, loading }
+    return { user, loading, register }
 })
 
