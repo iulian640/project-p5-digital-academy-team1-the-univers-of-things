@@ -1,0 +1,1 @@
+<!-- Vista gestion de usuarios: tabla con toggle permitido/restringido -->

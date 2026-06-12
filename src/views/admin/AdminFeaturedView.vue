@@ -1,0 +1,1 @@
+<!-- Vista gestion de destacados: juego del mes y lista de destacados -->

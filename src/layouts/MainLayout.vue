@@ -1,30 +1,15 @@
 <!-- Layout publico: AppAurora + TheHeader + slot + TheFooter -->
 <script setup>
-import AppAurora from '@/components/common/AppAurora.vue'
-import TheHeader from '@/components/common/TheHeader.vue'
-import TheFooter from '@/components/common/TheFooter.vue'
+import AppAurora from '@/components/layout/AppAurora.vue'
+import AppHeader from '@/components/layout/AppHeader.vue'
+import AppFooter from '@/components/layout/AppFooter.vue'
 </script>
 
 <template>
-    <div class="main-layout">
-        <AppAurora />
-        <TheHeader />
-        <main class="main-layout__content">
-            <slot />
-        </main>
-        <TheFooter />
-    </div>
+    <AppAurora />
+    <AppHeader />
+    <main class="main-layout">
+        <slot />
+    </main>
+    <AppFooter />
 </template>
-
-<style lang="scss" scoped>
-@use '../assets/styles/base/variables' as *;
-
-/* Layout publico: ocupa toda la altura, contenido flexible */
-
-.main-layout {
-    position: relative;
-    min-height: calc(100vh - 64px - 56px);
-    z-index: 1;
-    flex: 1;
-}
-</style>

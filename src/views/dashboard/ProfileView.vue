@@ -1,0 +1,1 @@
+<!-- Vista perfil de usuario: cambio de avatar y contraseña -->

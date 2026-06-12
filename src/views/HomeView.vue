@@ -2,7 +2,7 @@
 <script setup>
 import { ref } from 'vue'
 import MainLayout from '@/layouts/MainLayout.vue'
-import AppPagination from '@/components/common/AppPagination.vue'
+import AppPagination from '@/components/layout/AppPagination.vue'
 
 const currentPage = ref(1)
 const totalPages = ref(12)
@@ -56,13 +56,13 @@ function handlePageChange(page) {
                     </p>
 
                     <div class="hero__cta">
-                        <RouterLink to="/catalogo" class="btn btn--cta">
+                        <RouterLink to="/catalog" class="btn btn--cta">
                             Ver Catálogo
                             <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                                 <path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z" />
                             </svg>
                         </RouterLink>
-                        <RouterLink to="/destacados" class="btn btn--outline">
+                        <RouterLink to="/featured" class="btn btn--outline">
                             Ver Destacados
                         </RouterLink>
                     </div>

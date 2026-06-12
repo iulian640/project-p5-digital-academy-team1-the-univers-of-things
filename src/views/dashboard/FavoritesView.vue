@@ -1,0 +1,1 @@
+<!-- Vista favoritos: CRUD de favoritos, valoracion por estrellas y añadir nuevo -->

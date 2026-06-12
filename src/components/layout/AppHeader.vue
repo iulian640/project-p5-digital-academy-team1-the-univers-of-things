@@ -16,10 +16,10 @@
                     <RouterLink to="/">Inicio</RouterLink>
                 </li>
                 <li>
-                    <RouterLink to="/catalogo">Catálogo</RouterLink>
+                    <RouterLink to="/catalog">Catálogo</RouterLink>
                 </li>
                 <li>
-                    <RouterLink to="/destacados">Destacados</RouterLink>
+                    <RouterLink to="/featured">Destacados</RouterLink>
                 </li>
             </ul>
 
